@@ -5,8 +5,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-family: Montserrat, Verdana, sans-serif;
   font-weight: 400;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-width: 320px;
@@ -53,19 +54,38 @@ a {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 22px;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 18px;
+
+  @include lView {
+    font-size: 24px;
+  }
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+
+  @include lView {
+    font-size: 18px;
+  }
+}
+
+h4 {
+  font-size: 14px;
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 1.1;
+
+  @include lView {
+    font-size: 16px;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -84,7 +104,7 @@ input[type="radio"].visually-hidden {
 }
 
 ._container {
-  max-width: 1524px;
+  max-width: 1480px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -94,7 +114,7 @@ input[type="radio"].visually-hidden {
   grid-template-rows: auto 1fr auto;
   height: 100%;
   width: 100%;
-  max-width: 1920px;
+  // max-width: 1920px;
   margin: 0 auto;
 }
 

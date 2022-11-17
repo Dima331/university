@@ -35,3 +35,7 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin last-of-type {
+  margin-bottom: 0;
+}
