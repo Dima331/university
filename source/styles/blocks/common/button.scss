@@ -1,0 +1,30 @@
+.button {
+  display: inline-block;
+  font-weight: 500;
+  color: $light-text-color;
+  background-color: $main-color;
+  border-radius: 10px;
+  border: 0;
+  background: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  min-height: 40px;
+  text-align: center;
+  transition: all .15s ease;
+
+  &:hover {
+    background-color: $second-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    cursor: auto;
+  }
+
+  @include lView {
+    font-size: 16px;
+  }
+}
