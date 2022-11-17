@@ -1,0 +1,44 @@
+.faculties {
+  .faculties__list {
+    @include reset-list;
+    display: grid;
+    gap: 20px;
+
+    @include mView {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include lView {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .faculties__link {
+    background-color: $bg-card;
+    border-radius: $br;
+    transform: translate(0, 0);
+    min-height: 100%;
+  }
+
+  .faculties__img {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 67.7%;
+
+    img {
+      position: absolute;
+      border-radius: $br;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .faculties__subtitle {
+    padding: 10px;
+    margin: 0;
+  }
+}

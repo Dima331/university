@@ -4,7 +4,7 @@ section.education
     ul.education__list
       each education in educations
         li.education__item.shadow-line
-          a(href="#").education__link
+          a(href=`${education.url}`).education__link
             .education__img
               svg(xmlns="http://www.w3.org/2000/svg"   xml:space="preserve")
                 use(xlink:href=`img/symbols.svg#${education.img}`) 

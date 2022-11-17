@@ -1,0 +1,14 @@
+section.faculties 
+  ._container
+    h2.faculties__title.section-title Факультеты академии
+    ul.faculties__list 
+      each faculty in faculties
+        li.faculties__items.shadow-line
+          a(href=`${faculty.url}`).faculties__link
+            .faculties__img 
+              picture
+                source(media="(min-width: 600px)" type="image/webp" srcset=`img/content/${faculty.img}-d@1.webp`)
+                source(type="image/webp" srcset=`img/content/${faculty.img}-m@1.webp`)
+                source(media="(min-width: 600px)" srcset=`img/content/${faculty.img}-d@1.jpg`)
+                img(src=`img/content/${faculty.img}-m@1.jpg` alt="#" width="342" height="233")
+            h3.faculties__subtitle #{faculty.name} 
