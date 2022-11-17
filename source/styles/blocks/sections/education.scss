@@ -1,0 +1,75 @@
+.education {
+  background-color: $bg-section;
+  overflow: hidden;
+
+  .education__list {
+    @include reset-list;
+    display: grid;
+    gap: 20px;
+
+    @include mView {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include lView {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .education__link {
+    background-color: $bg-card;
+    border-radius: $br;
+    padding: 15px 18px 18px 18px;
+    height: 100%;
+    display: block;
+    transform: translate(0, 0);
+    transition: all .15s ease;
+    position: relative;
+
+    @include lView {
+      padding: 22px 60px 25px 25px;
+
+      &:hover {
+        .education__img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .education__img {
+    opacity: 0.5;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: 0.3s;
+    width: 60px;
+    max-height: 60px;
+    height: 60px;
+    fill: #EAEAEA;
+
+    svg {
+      width: 60px;
+      max-height: 60px;
+      max-height: 60px;
+    }
+
+    @include lView {
+      opacity: 0.2;
+      fill: $main-color;
+    }
+  }
+
+  .education__subtitle {
+    margin-top: 0;
+
+    @include lView {
+      padding-right: 80px;
+    }
+  }
+
+  .education__text {
+    margin-top: 0;
+    @include last-of-type;
+  }
+}
