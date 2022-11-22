@@ -1,0 +1,50 @@
+.resources {
+  .resources__list {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  .resources__title {
+    margin-bottom: 10px;
+
+    @include mView {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.resources__article {
+  display: flex;
+  height: 100%;
+}
+
+.resources__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 50px;
+  max-width: 140px;
+}
+
+.resources__link {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

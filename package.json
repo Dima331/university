@@ -68,5 +68,8 @@
     "hooks": {
       "pre-commit": "npm test"
     }
+  },
+  "dependencies": {
+    "swiper": "^8.4.4"
   }
 }
