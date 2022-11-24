@@ -28,3 +28,17 @@
     font-size: 16px;
   }
 }
+
+.button_white {
+  color: $second-color;
+  background-color: $light-text-color;
+  
+  &:hover {
+    background-color: $main-color;
+    color: $light-text-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
