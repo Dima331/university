@@ -1,0 +1,26 @@
+section.news 
+  ._container
+    h2.news__title.section-title События
+    //- div   
+    //-   ul 
+    //-     li 
+    //-       a(href="#") Новости
+    //-     li 
+    //-       a(href="#") Объявления
+    //-     li 
+    //-       a(href="#") Мероприятия
+    //-     li 
+    //-       a(href="#") Материалы конференций
+    //-   a(href="#") Все новости
+    ul.news__list
+      each item in news
+        li.news__item
+          a(href=`${item.url}`).news__link
+            .img.news__img 
+              picture
+                source(media="(min-width: 600px)" type="image/webp" srcset=`img/content/${item.img}.webp`)
+                source(type="image/webp" srcset=`img/content/${item.img}-m.webp`)
+                source(media="(min-width: 600px)" srcset=`img/content/${item.img}.jpg`)
+                img(src=`img/content/${item.img}-m.jpg` alt=`${item.title}` width="342" height="233")
+            h3.news__subtitle #{item.title} 
+            p.news__date  #{item.date}
