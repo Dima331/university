@@ -2,6 +2,51 @@ import Swiper, { Navigation, Pagination, Autoplay, Breakpoints, Keyboard } from 
 
 Swiper.use([Navigation, Pagination, Autoplay, Breakpoints, Keyboard]);
 
+const services = new Swiper('.services__slider', {
+  navigation: {
+    nextEl: '.services__next',
+    prevEl: '.services__prev'
+  },
+  autoplay: {
+    delay: 10000,
+    disableOnInteraction: false
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      centeredSlides: false,
+    },
+    400: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      centeredSlides: false,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      centeredSlides: true,
+    },
+    800: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      centeredSlides: true,
+    },
+    1000: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      centeredSlides: true,
+    },
+    1240: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    },
+  },
+  centeredSlides: true,
+  slidesPerView: "auto",
+  loop: true,
+});
+
 const resources = new Swiper('.resources__slider', {
   navigation: {
     nextEl: '.resources__next',

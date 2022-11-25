@@ -1,0 +1,26 @@
+section.services
+  ._container.services__container
+    h2.services__title.section-title Платные услуги
+    .slider.slider_services
+      .services__slider.slider__container
+        ul.services__list.slider__wrapper.swiper-wrapper 
+          each service in services
+            li.services__item.shadow-line.slider__slide.swiper-slide.swiper-slide_services
+              a(href=`${service.url}`  tabindex="-1").services__link
+                .services__img 
+                  picture
+                    source(media="(min-width: 600px)" type="image/webp" srcset=`img/content/${service.img}.webp`)
+                    source(type="image/webp" srcset=`img/content/${service.img}-m.webp`)
+                    source(media="(min-width: 600px)" srcset=`img/content/${service.img}.jpg`)
+                    img(src=`img/content/${service.img}-m.jpg` alt="#" width="342" height="233")
+                h3.services__subtitle #{service.name} 
+      button(type="button").swiper-button-prev.slider__button-prev.services__prev
+        svg(xmlns="http://www.w3.org/2000/svg" width="13" height="29" xml:space="preserve")
+          use(xlink:href="img/symbols.svg#arr_desc").slider__img-des 
+          use(xlink:href="img/symbols.svg#arr_mob").slider__img-mob
+        span.visually-hidden Предыдущий слайд
+      button(type="button").swiper-button-next.slider__button-next.services__next
+        svg(xmlns="http://www.w3.org/2000/svg" width="13" height="29" xml:space="preserve")
+          use(xlink:href="img/symbols.svg#arr_desc").slider__img-des
+          use(xlink:href="img/symbols.svg#arr_mob").slider__img-mob
+        span.visually-hidden Следующий слайд
