@@ -1,26 +1,73 @@
 section.news 
-  ._container
-    h2.news__title.section-title События
-    //- div   
-    //-   ul 
-    //-     li 
-    //-       a(href="#") Новости
-    //-     li 
-    //-       a(href="#") Объявления
-    //-     li 
-    //-       a(href="#") Мероприятия
-    //-     li 
-    //-       a(href="#") Материалы конференций
-    //-   a(href="#") Все новости
-    ul.news__list
-      each item in news
-        li.news__item
-          a(href=`${item.url}`).news__link
-            .img.news__img 
-              picture
-                source(media="(min-width: 600px)" type="image/webp" srcset=`img/content/${item.img}.webp`)
-                source(type="image/webp" srcset=`img/content/${item.img}-m.webp`)
-                source(media="(min-width: 600px)" srcset=`img/content/${item.img}.jpg`)
-                img(src=`img/content/${item.img}-m.jpg` alt=`${item.title}` width="342" height="233")
-            h3.news__subtitle #{item.title} 
-            p.news__date  #{item.date}
+  ._container.news__container
+    .news__menu
+      h2.news__title.section-title События
+      .news-nav   
+        ul.news-nav__list 
+          li.news-nav__item 
+            button(type="button" id="btn-tab-1").news-nav__btn.button.button_nav.active 
+              span.button__line Новости
+          li.news-nav__item 
+            button(type="button" id="btn-tab-2").news-nav__btn.button.button_nav 
+              span.button__line  Объявления
+          li.news-nav__item
+            button(type="button" id="btn-tab-3").news-nav__btn.button.button_nav 
+              span.button__line Мероприятия
+          li.news-nav__item 
+            button(type="button" id="btn-tab-4").news-nav__btn.button.button_nav 
+              span.button__line Материалы конференций
+        a(href="#").news-nav__all.link-all
+          span.button__line Все новости
+    .news__content
+      ul.news__list(id="tab-1")
+        each item in news
+          li.news__item.shadow-line
+            a(href=`${item.url}`).news__link
+              .news__img 
+                picture
+                  source(media="(min-width: 600px)" type="image/webp" srcset=`img/content/${item.img}.webp`)
+                  source(type="image/webp" srcset=`img/content/${item.img}-m.webp`)
+                  source(media="(min-width: 600px)" srcset=`img/content/${item.img}.jpg`)
+                  img(src=`img/content/${item.img}-m.jpg` alt=`${item.title}` width="342" height="233")
+              .news__info
+                h3.news__subtitle #{item.title} 
+                p.news__date  #{item.date}
+      ul.news__list(id="tab-2").visually-hidden
+        each item in events
+          li.news__item.shadow-line
+            a(href=`${item.url}`).news__link
+              .news__img 
+                picture
+                  source(media="(min-width: 600px)" type="image/webp" srcset=`img/content/${item.img}.webp`)
+                  source(type="image/webp" srcset=`img/content/${item.img}-m.webp`)
+                  source(media="(min-width: 600px)" srcset=`img/content/${item.img}.jpg`)
+                  img(src=`img/content/${item.img}-m.jpg` alt=`${item.title}` width="342" height="233")
+              .news__info
+                h3.news__subtitle #{item.title} 
+                p.news__date  #{item.date}
+      ul.news__list(id="tab-3").visually-hidden
+        each item in advertisement
+          li.news__item.shadow-line
+            a(href=`${item.url}`).news__link
+              .news__img 
+                picture
+                  source(media="(min-width: 600px)" type="image/webp" srcset=`img/content/${item.img}.webp`)
+                  source(type="image/webp" srcset=`img/content/${item.img}-m.webp`)
+                  source(media="(min-width: 600px)" srcset=`img/content/${item.img}.jpg`)
+                  img(src=`img/content/${item.img}-m.jpg` alt=`${item.title}` width="342" height="233")
+              .news__info
+                h3.news__subtitle #{item.title} 
+                p.news__date  #{item.date}
+      ul.news__list(id="tab-4").visually-hidden
+        each item in materials
+          li.news__item.shadow-line
+            a(href=`${item.url}`).news__link
+              .news__img 
+                picture
+                  source(media="(min-width: 600px)" type="image/webp" srcset=`img/content/${item.img}.webp`)
+                  source(type="image/webp" srcset=`img/content/${item.img}-m.webp`)
+                  source(media="(min-width: 600px)" srcset=`img/content/${item.img}.jpg`)
+                  img(src=`img/content/${item.img}-m.jpg` alt=`${item.title}` width="342" height="233")
+              .news__info
+                h3.news__subtitle #{item.title} 
+                p.news__date  #{item.date}

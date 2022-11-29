@@ -175,3 +175,42 @@ document.addEventListener('mouseleave', event => {
     }, 10);
   }
 }, true);
+
+
+const btnTabs = document.querySelectorAll(".news-nav__btn");
+const tabs = document.querySelectorAll(".news__list");
+const linkAll = document.querySelector(".news-nav__all.link-all .button__line");
+
+for (let btnTab of btnTabs) {
+  btnTab.addEventListener("click", function (e) {
+    let textBtn = "";
+    let tabId = 1;
+
+    btnTabs.forEach(function (btnTab, index) {
+      btnTab.classList.remove("active");
+      tabs[index].classList.add("visually-hidden");
+    });
+
+    if (!e.target.id) {
+      textBtn = e.target.parentNode.textContent;
+      e.target.parentNode.classList.add("active");
+      tabId = e.target.parentNode.id;
+    } else {
+      textBtn = e.target.textContent;
+      e.target.classList.add("active");
+      tabId = e.target.id;
+    }
+
+    tabs.forEach(function (tab, index) {
+      if (tabId[tabId.length - 1] === tab.id[tab.id.length - 1]) {
+        tab.classList.remove("visually-hidden");
+      }
+    })
+
+    if (textBtn && linkAll) {
+      textBtn = textBtn.toLowerCase();
+      linkAll.innerText = `Все ${textBtn}`;
+    }
+
+  });
+}
