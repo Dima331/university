@@ -1,0 +1,55 @@
+.carousel {
+  animation: scroll 40s linear infinite;
+  display: grid;
+  grid-auto-flow: column;
+  width: calc(320px * 10);
+  @include reset-list;
+  display: none;
+
+  @include lView {
+    display: grid;
+  }
+}
+
+.carousel__item {
+  height: 210px;
+  width: 320px;
+  box-sizing: content-box;
+  display: flex;
+
+  img {
+    border-radius: $br;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-320px * 5))
+  }
+}
+
+@keyframes reversScroll {
+  0% {
+    transform: translateX(calc(-320px * 5));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes deposeScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-320px * 5))
+  }
+}

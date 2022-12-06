@@ -147,6 +147,18 @@ const banners = new Swiper('.banners__slider', {
   loop: true,
 });
 
+const management = new Swiper('.management__slider', {
+  navigation: {
+    nextEl: '.management__next',
+    prevEl: '.management__prev'
+  },
+  slidesPerView: 1,
+  spaceBetween: 0,
+  grabCursor: true,
+  loopedSlides: "3",
+  loop: true,
+});
+
 document.addEventListener('mouseenter', event => {
   const el = event.target;
   if (el && el.matches && el.matches('.banners__slider')) {
