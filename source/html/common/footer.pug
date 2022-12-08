@@ -1,1 +1,50 @@
-footer.footer 
+footer.footer
+  .footer__container._container
+    .footer__top
+      .footer__contacts
+        include blocks/logo.pug
+        .adress.footer__adress
+          svg(xmlns="http://www.w3.org/2000/svg" width="20" height="20" xml:space="preserve").adress__img
+            use(xlink:href="img/symbols.svg#pointer")
+          p.adress__text Республика Беларусь 220013. г. Минск ул. П. Бровки д. 3, к. 3
+        include blocks/social.pug
+        .connection.footer__connection.footer__social_line
+          dl.connection__line
+            dt.connection__title Повышение квалификации и переподготовка
+            dd.connection__number
+              a(href="tel:+375173112726").connection__link +375 17 311-27-26
+          dl.connection__line
+            dt.connection__title Поступление в аспирантуру и докторантуру
+            dd.connection__number
+              a(href="tel:+375173112725").connection__link +375 17 311-27-25
+          dl.connection__line
+            dt.connection__title Поступление в клиническую ординатуру
+            dd.connection__number
+              a(href="tel:+375173112753").connection__link +375 17 311-27-53
+          dl.connection__line
+            dt.connection__title Медицинские услуги
+            dd.connection__number 
+              a(href="tel:+375173112748").connection__link +375 17 311-27-48
+      .footer__info
+        ul.info
+          li.info__item 
+            a(href="#").info__link Работа с обращениями граждан
+          li.info__item
+            a(href="#").info__link Контактная информация
+          li.info__item
+            a(href="#").info__link Сводный план повышения квалификации
+          li.info__item
+            a(href="#").info__link Докторантура, аспирантура, соискательство
+          li.info__item
+            a(href="#").info__link Клиническая ординатура
+          li.info__item
+            a(href="#").info__link Карта сайта
+        ul.info
+          li.info__item
+            a(href="#").info__link Президент Республики Беларусь
+          li.info__item
+            a(href="#").info__link Министерство здравоохранения
+  .footer__bottom
+    .footer__container._container
+      .rights
+        p.rights__text ЦИТ БелМАПО © 2022

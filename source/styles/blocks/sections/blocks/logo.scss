@@ -1,0 +1,58 @@
+.logo {
+  display: grid;
+  flex-direction: row;
+  color: $light-text-color;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+
+  @include mView {
+    grid-auto-flow: column;
+    gap: 20px;
+  }
+
+  .logo__img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  .logo__name {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    @include mView {
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+    }
+  }
+
+  .logo__text {
+    font-size: 12px;
+    margin: 0;
+    font-weight: 300;
+    margin-bottom: 3px;
+  }
+
+  .logo__subtext {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  svg path {
+    fill: $bg-card;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

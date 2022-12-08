@@ -1,0 +1,44 @@
+.connection {
+  color: $light-text-color;
+  display: grid;
+  gap: 15px;
+
+  @include lView {
+    font-size: 16px;
+    gap: 5px;
+  }
+
+  .connection__line {
+    margin: 0;
+    display: grid;
+    gap: 5px;
+
+    @include mView {
+      grid-template-columns: auto minmax(120px, auto);
+      justify-content: space-between;
+      column-gap: 20px;
+    }
+  }
+
+  .connection__number {
+    margin: 0;
+    font-weight: 500;
+
+    @include mView {
+      justify-self: flex-end;
+    }
+  }
+
+  .connection__link {
+    display: inline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.6;
+      text-decoration: underline;
+    }
+  }
+}
