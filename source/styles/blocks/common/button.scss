@@ -164,7 +164,6 @@
   transition: 0.3s;
   line-height: 1;
   min-height: auto;
-  border: 1px solid $warning;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -172,7 +171,6 @@
   &:hover {
     background-color: $warning;
     color: $light-text-color;
-    // border: 1px solid $warning;
     opacity: 1;
   }
 
@@ -189,8 +187,6 @@
   transition: 0.3s;
   line-height: 1;
   min-height: auto;
-  // border: 1px solid $warning;
-  // border-radius: 3px;
   position: relative;
 
   &:before {
@@ -206,9 +202,6 @@
 
   &:hover {
     background-color: inherit;
-    // color: $light-text-color;
-    // border: 1px solid $warning;
-    // text-decoration: underline;
     opacity: 1;
 
     &::after {

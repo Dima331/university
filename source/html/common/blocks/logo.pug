@@ -1,4 +1,4 @@
-.logo#logo(class=`logo_${type}` class= type === "footer" ? "footer__logo" : "header__logo")
+.logo(class=`logo_${type}` class= type === "footer" ? "footer__logo" : "header__logo" id= type ===  "footer" ? "logo-footer" : "logo" )
   a(href="#").logo__link
     .logo__box
       .logo__img

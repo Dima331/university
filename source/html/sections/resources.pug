@@ -7,11 +7,11 @@ section.resources
           each resource in resources
             li.resources__item.slider__slide.swiper-slide 
               article.resources__article
+                h3.visually-hidden #{resource.name}
                 a(href=`${resource.url}`).resources__link 
                   picture 
                     source(type="image/webp" srcset=`img/content/${resource.img}.webp`)
                     img(src=`img/content/${resource.img}.png` alt=`${resource.name}`).resources__img
-                  span.visually-hidden #{resource.name}
       button(type="button").swiper-button-prev.slider__button-prev.resources__prev
         svg(xmlns="http://www.w3.org/2000/svg" width="13" height="29" xml:space="preserve")
           use(xlink:href="img/symbols.svg#arr_desc").slider__img-des 

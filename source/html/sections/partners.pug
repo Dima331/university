@@ -7,11 +7,11 @@ section.partners
           each partner in partners
             li.partners__item.slider__slide.swiper-slide 
               article.partners__article
+                h3.visually-hidden #{partner.name} 
                 a(href=`${partner.url}`).partners__link 
                   picture 
                     source(type="image/webp" srcset=`img/content/${partner.img}.webp`)
-                    img(src=`img/content/${partner.img}.png` alt=`${partner.name}`).partners__img
-                  span.visually-hidden #{partner.name}
+                    img(src=`img/content/${partner.img}.jpg` alt=`${partner.name}`).partners__img
       button(type="button").swiper-button-prev.slider__button-prev.partners__prev
         svg(xmlns="http://www.w3.org/2000/svg" width="13" height="29" xml:space="preserve")
           use(xlink:href="img/symbols.svg#arr_desc").slider__img-des 

@@ -146,6 +146,7 @@
     height: 40px;
     fill: $light-text-color;
     animation: show 0.5s alternate ease-in-out;
+    z-index: 112;
 
     svg {
       fill: $light-text-color;

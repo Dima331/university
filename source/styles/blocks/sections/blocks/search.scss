@@ -25,6 +25,10 @@
       color: $light-text-color;
     }
 
+    &::-ms-input-placeholder {
+      color: $light-text-color;
+    }
+
     @include lView {
       padding-right: 100px;
       color: $dark-text-color;

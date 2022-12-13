@@ -13,7 +13,7 @@
     margin-right: -10px;
   }
 
-  .button__line {
+  .link-all__line {
     position: relative;
 
     &::after {
@@ -26,6 +26,13 @@
       transform: translateX(-50%);
       background-color: $main-color;
       transition: all .15s ease;
+    }
+
+    &:hover {
+      &::after {
+        transition: all .15s ease;
+        width: 0;
+      }
     }
   }
 

@@ -5,7 +5,7 @@ section.banners
       .banners__slider.slider__container
         ul.banners__list.slider__wrapper.swiper-wrapper
           each banner in banners
-            li(style=`background-image: url(img/${banner.img})` media="screen and (max-width: 1280px)").slider__slide.swiper-slide.banner
+            li(style=`background-image: url(img/${banner.img})`).slider__slide.swiper-slide.banner
               .banner__sub-bg
                 svg(xmlns="http://www.w3.org/2000/svg" width="13" height="29" xml:space="preserve")
                   rect(width="728.103" height="626.93" rx="20" transform="matrix(0.360546 -0.932741 0.896006 0.444041 -5 673.132)" fill="#10509E" fill-opacity="0.9")

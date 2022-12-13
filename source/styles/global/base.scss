@@ -122,3 +122,9 @@ input[type="radio"].visually-hidden {
 .lock {
   overflow: hidden;
 }
+
+.main {
+  @include lView {
+    padding-top: 206px;
+  }
+}

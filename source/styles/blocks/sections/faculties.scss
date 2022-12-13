@@ -1,4 +1,6 @@
 .faculties {
+  overflow: hidden;
+
   .faculties__list {
     @include reset-list;
     display: grid;
