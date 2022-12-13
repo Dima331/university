@@ -1,6 +1,9 @@
-.logo.footer__logo
-  a(href="#").logo
-    img(src="img/logo-white.svg" alt="Логотип Белмапо").logo__img
+.logo#logo(class=`logo_${type}` class= type === "footer" ? "footer__logo" : "header__logo")
+  a(href="#").logo__link
+    .logo__box
+      .logo__img
+        svg(xmlns="http://www.w3.org/2000/svg" width="88" height="88" xml:space="preserve")
+          use(xlink:href="img/symbols.svg#logo")
     .logo__name
       p.logo__text Государственное учреждение образования
       p.logo__subtext Белорусская медицинская академия последипломного образования

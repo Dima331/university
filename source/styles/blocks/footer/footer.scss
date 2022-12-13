@@ -59,22 +59,6 @@
     }
   }
 
-  .footer__social {
-    justify-content: center;
-    padding-bottom: 15px;
-
-    @include mView {
-      justify-content: flex-start;
-    }
-
-    @include lView {
-      padding-bottom: 0;
-      grid-area: 2 / 2 / 3 / 3;
-      margin-top: -18px;
-      margin-right: -13px;
-    }
-  }
-
   .footer__top {
     padding: 30px 0;
   }
@@ -96,7 +80,7 @@
     }
   }
 
-  .footer__social_line {
+  .footer__line {
     position: relative;
 
     &::after {

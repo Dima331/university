@@ -1,4 +1,4 @@
-ul.social.footer__social.footer__social_line
+ul(class=`social_${type}` class= type === "footer" ? "footer__line" : "header__social").social
   li.social__item
     a(href="#").social__link 
       svg(xmlns="http://www.w3.org/2000/svg" width="19" height="17" xml:space="preserve").social__img
