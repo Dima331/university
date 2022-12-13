@@ -33,3 +33,47 @@
     fill: $light-text-color;
   }
 }
+
+.social_footer {
+  justify-content: center;
+  padding-bottom: 15px;
+
+  @include mView {
+    justify-content: flex-start;
+  }
+
+  @include lView {
+    padding-bottom: 0;
+    grid-area: 2 / 2 / 3 / 3;
+    margin-top: -18px;
+    margin-right: -8px;
+  }
+}
+
+.social_header {
+  margin: 0;
+
+  @include lView {
+    margin-top: -10px;
+    margin-right: -9px;
+  }
+
+  svg {
+    fill: $second-color;
+  }
+
+  .social__link {
+    &:hover {
+      opacity: 1;
+
+      svg {
+        fill: $main-color;
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}

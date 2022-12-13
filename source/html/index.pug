@@ -4,7 +4,10 @@ html(lang='ru')
   include common/head.pug
   body.body
     ._wrapper
+      - var type = "header";
+      include common/header.pug
       main.main
+        h1.visually-hidden Главная страница БелМАПО
         - var banners = [{title: "Научно-исследовательская деятельность", subtitle: "Разработка и внедрение инновационных технологий в практическое здравоохранение и образовательный процесс - наш вклад в медицину будущего. Реализация возможностей для комплексных научно-исследовательских работ по актуальным...", url: "#", img:"slide1-d.jpg", imgs:"slide1-m"}, {title: "Cпорткомплекс БелМАПО", subtitle: "Игровой зал (баскетбол, волейбол, большой теннис). Тренажерный зал и кардио зона. Фитнес-зал. Большой ассортимент спортивного  инвентаря. Обширный перечень тренировочных программ.", url: "#", img:"slide3-d.jpg", imgs:"slide3-m"}, {title: "Обучение в докторантуре, аспирантуре и клинической ординатуре", subtitle: "Постоянное совершенствование профессиональных знаний и практических навыков, получение научной квалификации - новые вершины профессиональной карьеры. Получайте высшую форму профессиональной...", url: "#", img:"slide2-d.jpg", imgs:"slide2-m"}]
         include sections/banners.pug
         - var news = [{title: "Обучающий семинар «ВИЧ-инфекция у детей»", date: "10 июнь 2022", img: "n1", url: "#"}, {title: "Встреча слушателей и сотрудников кафедры гигиены и медицинской экологии БелМАПО с заместителем...", date: "10 июнь 2022", img: "n2", url: "#"}, {title: "Школа организатора здравоохранения БелМАПО – Бюджетирование расходов по модели клинико-затратных групп как метод повышения...", date: "10 июнь 2022", img: "n3", url: "#"}]
@@ -27,5 +30,6 @@ html(lang='ru')
         include sections/consultation.pug
         - var resources = [{name: "title1", img: "q1", url: "#"}, {name: "title2", img: "q2", url: "#"}, {name: "title3", img: "q3", url: "#"}, {name: "title4", img: "q4", url: "#"}, {name: "title5", img: "q5", url: "#"},{name: "title6", img: "q6", url: "#"},{name: "title7", img: "q7", url: "#"},{name: "title8", img: "q8", url: "#"},{name: "title9", img: "q9", url: "#"}]
         include sections/resources.pug
+      - var type = "footer";
       include common/footer.pug
     script(src="js/main.bundle.js")

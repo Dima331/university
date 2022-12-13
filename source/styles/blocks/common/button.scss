@@ -93,7 +93,7 @@
   }
 }
 
-.active {
+.button_nav.active {
   background-color: $main-color;
   color: $light-text-color;
   text-decoration: none;
@@ -111,5 +111,120 @@
     &::after {
       width: 0;
     }
+  }
+}
+
+.button_language {
+  padding: 5px;
+  color: $light-text-color;
+  background-color: inherit;
+  text-transform: uppercase;
+  font-weight: 300;
+  transition: 0.3s;
+  line-height: 1;
+  min-height: auto;
+
+  &:hover {
+    background-color: inherit;
+    text-decoration: underline;
+  }
+
+  &:active {
+    background-color: inherit;
+    text-decoration: underline;
+  }
+
+  @include lView {
+    color: $dark-text-color;
+    background-color: inherit;
+  }
+}
+
+.button_language.active {
+  font-weight: 500;
+  color: $dark-text-color;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @include lView {
+    color: $main-color;
+  }
+}
+
+.button_warning {
+  padding: 5px 13px;
+  color: $warning;
+  background-color: inherit;
+  transition: 0.3s;
+  line-height: 1;
+  min-height: auto;
+  border: 1px solid $warning;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: $warning;
+    color: $light-text-color;
+    // border: 1px solid $warning;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.button_visually {
+  padding: 0;
+  margin-left: 30px;
+  color: $dark-text-color;
+  background-color: inherit;
+  transition: 0.3s;
+  line-height: 1;
+  min-height: auto;
+  // border: 1px solid $warning;
+  // border-radius: 3px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+    background-image: url("../img/glasses.svg");
+    width: 22px;
+    height: 15px;
+  }
+
+  &:hover {
+    background-color: inherit;
+    // color: $light-text-color;
+    // border: 1px solid $warning;
+    // text-decoration: underline;
+    opacity: 1;
+
+    &::after {
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 100%;
+      height: 1px;
+      content: '';
+      transition: .15s;
+      transform: translateX(-50%);
+      background-color: #000;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }

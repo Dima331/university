@@ -1,0 +1,14 @@
+.language {
+  @include reset-list;
+  display: grid;
+  grid-auto-flow: column;
+  display: none;
+
+  @include lView {
+    display: grid;
+  }
+}
+
+.language_show {
+  display: grid;
+}

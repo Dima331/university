@@ -1,0 +1,70 @@
+.search {
+  .search__form {
+    display: flex;
+    position: relative;
+  }
+
+  .search__input {
+    background: 0 0;
+    border: none;
+    flex: 1;
+    font-size: 15px;
+    background: url("../img/search-m.svg") 5px center no-repeat;
+    padding-left: 30px;
+    padding: 2px 2px 2px 30px;
+    transition: border .5s ease-out;
+    border-radius: 1px;
+    color: $light-text-color;
+    width: 100px;
+
+    @include mView {
+      width: auto;
+    }
+
+    &::placeholder {
+      color: $light-text-color;
+    }
+
+    @include lView {
+      padding-right: 100px;
+      color: $dark-text-color;
+      background: url("../img/search.svg") 5px center no-repeat;
+
+      &::placeholder {
+        color: $data-color;
+      }
+    }
+
+    &:focus-visible {
+      outline: $main-color solid 1px;
+      outline-offset: 4px;
+    }
+  }
+
+  .search__btn {
+    position: absolute;
+    top: 50%;
+    right: -2px;
+    transform: translateY(-50%);
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    min-height: auto;
+    border-radius: 5px;
+    transition: opacity .5s ease-out;
+    opacity: 0;
+    display: none;
+
+    @include lView {
+      display: block;
+    }
+  }
+
+  .search__input:focus+.search__btn {
+    opacity: 1;
+  }
+}
+
+.search_hide {
+  display: none;
+}

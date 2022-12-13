@@ -112,10 +112,11 @@ input[type="radio"].visually-hidden {
 ._wrapper {
   // display: grid;
   // grid-template-rows: auto 1fr auto;
-  height: 100%;
+  // height: 100%;
   width: 100%;
-  // max-width: 1920px;
+  min-height: 100%;
   margin: 0 auto;
+  position: relative;
 }
 
 .lock {

@@ -226,3 +226,73 @@ for (let btnTab of btnTabs) {
 
   });
 }
+
+
+const header = document.getElementById("header");
+const logo = document.getElementById("logo");
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  if (fromTop > 120 && window.innerWidth > 1024) {
+    header.classList.add("header_hide");
+  } else if (fromTop <= 120 && window.innerWidth > 1024) {
+    header.classList.remove("header_hide");
+  } else if (window.innerWidth < 1024) {
+    header.classList.remove("header_hide");
+  }
+
+  if (window.innerWidth < 1024 && fromTop > 40) {
+    logo.classList.add("logo_active");
+    logo.classList.remove("logo_notactive");
+  } else if (window.innerWidth < 1024 && fromTop < 40) {
+    logo.classList.remove("logo_active");
+    logo.classList.add("logo_notactive");
+  }
+});
+
+
+(function () {
+  const nav = document.querySelector(".header__nav");
+  const body = document.querySelector("body");
+  const burger = document.querySelector(".burger");
+  const search = document.querySelector(".header__search");
+  const language = document.querySelector(".header__language");
+
+  if (burger) {
+    burger.addEventListener('click', function () {
+      if (nav.classList.contains("header__nav_active")) {
+        nav.classList.remove('header__nav_active');
+        body.classList.remove("lock");
+        burger.classList.remove("burger_active");
+
+        search.classList.remove("search_hide");
+        language.classList.remove("language_show");
+        if (window.scrollY < 40) {
+          logo.classList.remove("logo_active");
+        }
+
+      } else {
+        nav.classList.add("header__nav_active");
+        body.classList.add("lock");
+        burger.classList.add("burger_active");
+        logo.classList.add("logo_active");
+        search.classList.add("search_hide");
+        language.classList.add("language_show");
+      }
+    });
+  }
+})();
+
+
+(function () {
+  const navs = document.querySelectorAll(".nav__item");
+
+  for (let nav of navs) {
+    nav.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.target.parentNode.classList.toggle("nav__item_active");
+    })
+  };
+})();
+
